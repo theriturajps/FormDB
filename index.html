@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Form</h1>
+    <form id="myForm">
+      <input type="text" placeholder="Name" id="name" required><br>
+      <input type="text" placeholder="Username" id="username" required oninput="checkUsernameAvailability()"><span id="availability"></span><br>
+      <input type="date" id="dob" required><br>
+      <input type="tel" placeholder="Phone Number" id="phone" required><br>
+      <input type="file" id="file" required><br>
+      <input type="email" placeholder="Email" id="email" required><br>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="message"></div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <script src="assets/js/form.js"></script>
+</body>
+</html>

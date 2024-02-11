@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Admin Panel</h1>
+        <!-- Form to enter username and code -->
+        <form id="adminForm">
+            <input type="text" placeholder="Username" id="adminUsername" required><br>
+            <input type="text" placeholder="Code" id="adminCode" required><br>
+            <button type="button" onclick="openPopup()">Login</button>
+        </form>
+        <!-- Popup box for modifying details -->
+        <div class="popup" id="popup">
+            <!-- Inputs for modifying details -->
+            <input type="text" placeholder="Name" id="adminName"><br>
+            <input type="date" id="adminDOB"><br>
+            <input type="tel" placeholder="Phone Number" id="adminPhone"><br>
+            <input type="email" placeholder="Email" id="adminEmail"><br>
+            <input type="text" placeholder="Code" id="adminEditCode"><br>
+            <button onclick="saveChanges()">Save</button>
+            <button onclick="closePopup()">Cancel</button>
+        </div>
+        <div id="message"></div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="assets/js/admin.js"></script>
+</body>
+
+</html>

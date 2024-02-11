@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview</title>
+  <link rel="stylesheet" href="assets/css/preview.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Preview Form Data</h1>
+    <form id="previewForm">
+      <input type="text" placeholder="Enter Username" id="previewUsername" required><br>
+      <input type="text" placeholder="Enter Code" id="previewCode" required><br>
+      <div id="error" class="error"></div> <!-- Error message container -->
+      <input type="button" value="Preview" onclick="showPreview()">
+    </form>
+  </div>
+  <div class="popup" id="previewPopup">
+    <span class="close" onclick="closePopup()">X</span>
+    <h2>Preview Data</h2>
+    <div id="previewData"></div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="assets/js/preview.js"></script>
+</body>
+
+</html>
